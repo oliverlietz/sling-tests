@@ -24,34 +24,31 @@
   <parent>
     <groupId>org.apache.sling</groupId>
     <artifactId>org.apache.sling.tests</artifactId>
-    <version>1</version>
+    <version>2</version>
     <relativePath>../pom.xml</relativePath>
   </parent>
 
-  <artifactId>org.apache.sling.tests.sling_2917</artifactId>
-  <version>1</version>
+  <artifactId>org.apache.sling.tests.sling_2998</artifactId>
+  <version>2</version>
 
-  <name>Apache Sling Tests SLING-2917</name>
+  <name>Apache Sling Tests SLING-2998</name>
 
   <dependencies>
     <!-- javax -->
     <dependency>
-      <groupId>javax.jcr</groupId>
-      <artifactId>jcr</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <!-- javax -->
-    <dependency>
       <groupId>javax.inject</groupId>
       <artifactId>javax.inject</artifactId>
-      <version>1</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>javax.jcr</groupId>
+      <artifactId>jcr</artifactId>
       <scope>test</scope>
     </dependency>
     <!-- Apache Karaf -->
     <dependency>
       <groupId>org.apache.karaf.features</groupId>
       <artifactId>org.apache.karaf.features.core</artifactId>
-      <version>3.0.0.RC1</version>
       <scope>test</scope>
     </dependency>
     <!-- Apache Sling -->
@@ -64,7 +61,6 @@
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-api</artifactId>
-      <version>1.6.6</version>
       <scope>test</scope>
     </dependency>
     <!-- testing -->
@@ -94,6 +90,10 @@
           <artifactId>org.apache.karaf.client</artifactId>
         </exclusion>
       </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.geronimo.bundles</groupId>
+      <artifactId>commons-httpclient</artifactId>
     </dependency>
   </dependencies>
 
