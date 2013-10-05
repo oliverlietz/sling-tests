@@ -86,12 +86,12 @@
       <dependency>
         <groupId>org.ops4j.pax.exam</groupId>
         <artifactId>pax-exam-junit4</artifactId>
-        <version>3.2.0</version>
+        <version>3.3.0</version>
       </dependency>
       <dependency>
         <groupId>org.ops4j.pax.exam</groupId>
         <artifactId>pax-exam-container-karaf</artifactId>
-        <version>3.2.0</version>
+        <version>3.3.0</version>
       </dependency>
       <dependency>
         <groupId>org.apache.karaf</groupId>
