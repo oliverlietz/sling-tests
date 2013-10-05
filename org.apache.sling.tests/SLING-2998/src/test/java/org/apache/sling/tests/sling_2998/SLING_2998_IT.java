@@ -29,6 +29,8 @@ import org.apache.commons.httpclient.HttpMethod;
 import org.apache.commons.httpclient.UsernamePasswordCredentials;
 import org.apache.commons.httpclient.auth.AuthScope;
 import org.apache.commons.httpclient.methods.GetMethod;
+import org.apache.sling.auth.core.impl.LoginServlet;
+import org.apache.sling.auth.core.impl.LogoutServlet;
 import org.apache.sling.jcr.api.SlingRepository;
 import org.apache.sling.launchpad.karaf.testing.KarafTestSupport;
 import org.junit.Test;
@@ -38,7 +40,7 @@ import org.ops4j.pax.exam.Option;
 import org.ops4j.pax.exam.junit.PaxExam;
 import org.ops4j.pax.exam.karaf.options.LogLevelOption;
 import org.ops4j.pax.exam.spi.reactors.ExamReactorStrategy;
-import org.ops4j.pax.exam.spi.reactors.PerClass;
+import org.ops4j.pax.exam.spi.reactors.PerMethod;
 import org.ops4j.pax.exam.util.Filter;
 import org.osgi.framework.BundleContext;
 
@@ -51,7 +53,7 @@ import static org.ops4j.pax.exam.karaf.options.KarafDistributionOption.keepRunti
 import static org.ops4j.pax.exam.karaf.options.KarafDistributionOption.logLevel;
 
 @RunWith(PaxExam.class)
-@ExamReactorStrategy(PerClass.class)
+@ExamReactorStrategy(PerMethod.class)
 public class SLING_2998_IT extends KarafTestSupport {
 
     @Inject
@@ -61,7 +63,7 @@ public class SLING_2998_IT extends KarafTestSupport {
     @Filter(timeout = 240000)
     protected SlingRepository slingRepository;
 
-    public static final String URI = "http://localhost:8181/sling-test/sling/sling-test.html";
+    public static final String BASE_URL = "http://localhost:8181";
 
     @Configuration
     public Option[] configuration() {
@@ -76,9 +78,44 @@ public class SLING_2998_IT extends KarafTestSupport {
     }
 
     @Test
+    public void testRoot() throws Exception {
+        final HttpClient httpClient = new HttpClient();
+        final HttpMethod get = new GetMethod(BASE_URL);
+
+        httpClient.executeMethod(get);
+        assertEquals(200, get.getStatusCode());
+    }
+
+    @Test
+    public void testLoginServlet() throws Exception {
+        final HttpClient httpClient = new HttpClient();
+        final HttpMethod get = new GetMethod(BASE_URL + LoginServlet.SERVLET_PATH);
+
+        httpClient.executeMethod(get);
+        assertEquals(403, get.getStatusCode());
+
+        httpClient.getParams().setAuthenticationPreemptive(true);
+        httpClient.getState().setCredentials(
+            AuthScope.ANY,
+            new UsernamePasswordCredentials("admin", "admin")
+        );
+        httpClient.executeMethod(get);
+        assertEquals(200, get.getStatusCode());
+    }
+
+    @Test
+    public void testLogoutServlet() throws Exception {
+        final HttpClient httpClient = new HttpClient();
+        final HttpMethod get = new GetMethod(BASE_URL + LogoutServlet.SERVLET_PATH);
+
+        httpClient.executeMethod(get);
+        assertEquals(200, get.getStatusCode());
+    }
+
+    @Test
     public void testSlingTest() throws Exception {
         final HttpClient httpClient = new HttpClient();
-        final HttpMethod get = new GetMethod(URI);
+        final HttpMethod get = new GetMethod(BASE_URL + "/sling-test/sling/sling-test.html");
 
         httpClient.executeMethod(get);
         assertEquals(200, get.getStatusCode());
