@@ -62,7 +62,7 @@ public class SLING_2917_IT extends KarafTestSupport {
             karafDistributionConfiguration().frameworkUrl(maven().groupId(karafGroupId()).artifactId(karafArtifactId()).version(karafVersion()).type("tar.gz")).karafVersion(karafVersion()).name(karafName()).unpackDirectory(new File("target/paxexam/")),
             keepRuntimeFolder(),
             logLevel(LogLevelOption.LogLevel.INFO),
-            editConfigurationFileExtend("etc/org.apache.karaf.features.cfg", "featuresRepositories", ",mvn:org.apache.sling/org.apache.sling.tests.features/2/xml/features"),
+            editConfigurationFileExtend("etc/org.apache.karaf.features.cfg", "featuresRepositories", ",mvn:org.apache.sling/org.apache.sling.tests.features/3/xml/features"),
             editConfigurationFileExtend("etc/org.apache.karaf.features.cfg", "featuresBoot", ",SLING-2917"),
             mavenBundle().groupId("org.apache.sling").artifactId("org.apache.sling.launchpad.karaf-integration-tests").version("0.1.1-SNAPSHOT")
         };
