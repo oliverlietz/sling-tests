@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <features name="sling-tests" xmlns="http://karaf.apache.org/xmlns/features/v1.2.0">
-  <repository>mvn:org.apache.sling/org.apache.sling.launchpad.karaf-features/0.1.0-SNAPSHOT/xml/features</repository>
+  <repository>mvn:org.apache.sling/org.apache.sling.launchpad.karaf-features/0.1.1-SNAPSHOT/xml/features</repository>
   <feature name="SLING-2917" version="${project.version}">
-    <feature version="0.1.0-SNAPSHOT">sling-launchpad-jackrabbit</feature>
-    <feature version="0.1.0-SNAPSHOT">sling-launchpad-content</feature>
+    <feature version="0.1.1-SNAPSHOT">sling-launchpad-jackrabbit</feature>
+    <feature version="0.1.1-SNAPSHOT">sling-launchpad-content</feature>
   </feature>
   <feature name="SLING-2998" version="${project.version}">
-    <feature version="0.1.0-SNAPSHOT">sling-launchpad-jackrabbit</feature>
-    <feature version="0.1.0-SNAPSHOT">sling-launchpad-content</feature>
+    <feature version="0.1.1-SNAPSHOT">sling-launchpad-jackrabbit</feature>
+    <feature version="0.1.1-SNAPSHOT">sling-launchpad-content</feature>
   </feature>
 </features>

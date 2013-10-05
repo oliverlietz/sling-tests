@@ -73,7 +73,7 @@ public class SLING_2998_IT extends KarafTestSupport {
             logLevel(LogLevelOption.LogLevel.INFO),
             editConfigurationFileExtend("etc/org.apache.karaf.features.cfg", "featuresRepositories", ",mvn:org.apache.sling/org.apache.sling.tests.features/2/xml/features"),
             editConfigurationFileExtend("etc/org.apache.karaf.features.cfg", "featuresBoot", ",SLING-2998"),
-            mavenBundle().groupId("org.apache.sling").artifactId("org.apache.sling.launchpad.karaf-integration-tests").version("0.1.0-SNAPSHOT")
+            mavenBundle().groupId("org.apache.sling").artifactId("org.apache.sling.launchpad.karaf-integration-tests").version("0.1.1-SNAPSHOT")
         };
     }
 
