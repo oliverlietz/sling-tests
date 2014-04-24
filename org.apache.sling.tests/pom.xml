@@ -24,11 +24,11 @@
   <parent>
     <groupId>org.apache.sling</groupId>
     <artifactId>sling</artifactId>
-    <version>18</version>
+    <version>19</version>
   </parent>
 
   <artifactId>org.apache.sling.tests</artifactId>
-  <version>3</version>
+  <version>4</version>
   <packaging>pom</packaging>
 
   <name>Apache Sling Tests</name>
@@ -36,10 +36,12 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <!-- versions -->
+    <org.apache.karaf.version>3.0.1</org.apache.karaf.version>
+    <org.ops4j.pax.exam.version>3.4.0</org.ops4j.pax.exam.version>
   </properties>
 
   <modules>
-    <module>features</module>
     <module>SLING-2917</module>
     <module>SLING-2998</module>
   </modules>
@@ -56,24 +58,29 @@
       <dependency>
         <groupId>org.apache.karaf.features</groupId>
         <artifactId>org.apache.karaf.features.core</artifactId>
-        <version>3.0.0.RC1</version>
+        <version>${org.apache.karaf.version}</version>
       </dependency>
-      <!-- Apache Commons -->
+      <!-- Apache HttpComponents -->
       <dependency>
-        <groupId>org.apache.geronimo.bundles</groupId>
-        <artifactId>commons-httpclient</artifactId>
-        <version>3.1_1</version>
+        <groupId>org.apache.httpcomponents</groupId>
+        <artifactId>httpclient-osgi</artifactId>
+        <version>4.3.2</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.httpcomponents</groupId>
+        <artifactId>httpcore-osgi</artifactId>
+        <version>4.3.2</version>
       </dependency>
       <!-- Apache Sling -->
       <dependency>
         <groupId>org.apache.sling</groupId>
         <artifactId>org.apache.sling.auth.core</artifactId>
-        <version>1.1.4</version>
+        <version>1.1.6</version>
       </dependency>
       <dependency>
         <groupId>org.apache.sling</groupId>
         <artifactId>org.apache.sling.jcr.api</artifactId>
-        <version>2.1.0</version>
+        <version>2.2.0</version>
       </dependency>
       <!-- logging -->
       <dependency>
@@ -91,18 +98,18 @@
       <dependency>
         <groupId>org.ops4j.pax.exam</groupId>
         <artifactId>pax-exam-junit4</artifactId>
-        <version>3.3.0</version>
+        <version>${org.ops4j.pax.exam.version}</version>
       </dependency>
       <dependency>
         <groupId>org.ops4j.pax.exam</groupId>
         <artifactId>pax-exam-container-karaf</artifactId>
-        <version>3.3.0</version>
+        <version>${org.ops4j.pax.exam.version}</version>
       </dependency>
       <dependency>
         <groupId>org.apache.karaf</groupId>
         <artifactId>apache-karaf</artifactId>
         <type>tar.gz</type>
-        <version>3.0.0.RC1</version>
+        <version>${org.apache.karaf.version}</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
@@ -123,7 +130,7 @@
         <plugin>
           <groupId>org.apache.karaf.tooling</groupId>
           <artifactId>karaf-maven-plugin</artifactId>
-          <version>3.0.0.RC1</version>
+          <version>${org.apache.karaf.version}</version>
         </plugin>
       </plugins>
     </pluginManagement>

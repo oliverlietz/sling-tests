@@ -18,17 +18,19 @@
  */
 package org.apache.sling.tests.sling_2998;
 
-import java.io.File;
 import java.util.Dictionary;
 import java.util.Hashtable;
 
 import javax.inject.Inject;
 
-import org.apache.commons.httpclient.HttpClient;
-import org.apache.commons.httpclient.HttpMethod;
-import org.apache.commons.httpclient.UsernamePasswordCredentials;
-import org.apache.commons.httpclient.auth.AuthScope;
-import org.apache.commons.httpclient.methods.GetMethod;
+import org.apache.http.HttpResponse;
+import org.apache.http.auth.AuthScope;
+import org.apache.http.auth.UsernamePasswordCredentials;
+import org.apache.http.client.CredentialsProvider;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.BasicCredentialsProvider;
+import org.apache.http.impl.client.HttpClients;
 import org.apache.sling.auth.core.impl.LoginServlet;
 import org.apache.sling.auth.core.impl.LogoutServlet;
 import org.apache.sling.jcr.api.SlingRepository;
@@ -37,20 +39,15 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.ops4j.pax.exam.Configuration;
 import org.ops4j.pax.exam.Option;
+import org.ops4j.pax.exam.OptionUtils;
 import org.ops4j.pax.exam.junit.PaxExam;
-import org.ops4j.pax.exam.karaf.options.LogLevelOption;
 import org.ops4j.pax.exam.spi.reactors.ExamReactorStrategy;
 import org.ops4j.pax.exam.spi.reactors.PerMethod;
 import org.ops4j.pax.exam.util.Filter;
 import org.osgi.framework.BundleContext;
 
 import static org.junit.Assert.assertEquals;
-import static org.ops4j.pax.exam.CoreOptions.maven;
 import static org.ops4j.pax.exam.CoreOptions.mavenBundle;
-import static org.ops4j.pax.exam.karaf.options.KarafDistributionOption.editConfigurationFileExtend;
-import static org.ops4j.pax.exam.karaf.options.KarafDistributionOption.karafDistributionConfiguration;
-import static org.ops4j.pax.exam.karaf.options.KarafDistributionOption.keepRuntimeFolder;
-import static org.ops4j.pax.exam.karaf.options.KarafDistributionOption.logLevel;
 
 @RunWith(PaxExam.class)
 @ExamReactorStrategy(PerMethod.class)
@@ -63,77 +60,72 @@ public class SLING_2998_IT extends KarafTestSupport {
     @Filter(timeout = 240000)
     protected SlingRepository slingRepository;
 
-    public static final String BASE_URL = "http://localhost:8181";
+    public SLING_2998_IT() {
+        httpPort = 8181; // TODO fix
+    }
+
+    protected String baseUri() {
+        return "http://localhost:" + httpPort();
+    }
 
     @Configuration
     public Option[] configuration() {
-        return new Option[]{
-            karafDistributionConfiguration().frameworkUrl(maven().groupId(karafGroupId()).artifactId(karafArtifactId()).version(karafVersion()).type("tar.gz")).karafVersion(karafVersion()).name(karafName()).unpackDirectory(new File("target/paxexam/")),
-            keepRuntimeFolder(),
-            logLevel(LogLevelOption.LogLevel.INFO),
-            editConfigurationFileExtend("etc/org.apache.karaf.features.cfg", "featuresRepositories", ",mvn:org.apache.sling/org.apache.sling.tests.features/3/xml/features"),
-            editConfigurationFileExtend("etc/org.apache.karaf.features.cfg", "featuresBoot", ",SLING-2998"),
-            mavenBundle().groupId("org.apache.sling").artifactId("org.apache.sling.launchpad.karaf-integration-tests").version("0.1.1-SNAPSHOT")
-        };
+        return OptionUtils.combine(baseConfiguration(),
+            addBootFeature("sling-launchpad-jackrabbit"),
+            addBootFeature("sling-launchpad-content"),
+            mavenBundle().groupId("org.apache.httpcomponents").artifactId("httpclient-osgi").version("4.3.2"),
+            mavenBundle().groupId("org.apache.httpcomponents").artifactId("httpcore-osgi").version("4.3.2")
+        );
     }
 
     @Test
     public void testRoot() throws Exception {
-        final HttpClient httpClient = new HttpClient();
-        final HttpMethod get = new GetMethod(BASE_URL);
-
-        httpClient.executeMethod(get);
-        assertEquals(200, get.getStatusCode());
+        final HttpClient httpClient = HttpClients.createDefault();
+        final HttpGet httpGet = new HttpGet(baseUri());
+        final HttpResponse httpResponse = httpClient.execute(httpGet);
+        assertEquals(200, httpResponse.getStatusLine().getStatusCode());
     }
 
     @Test
     public void testLoginServlet() throws Exception {
-        final HttpClient httpClient = new HttpClient();
-        final HttpMethod get = new GetMethod(BASE_URL + LoginServlet.SERVLET_PATH);
-
-        httpClient.executeMethod(get);
-        assertEquals(403, get.getStatusCode());
-
-        httpClient.getParams().setAuthenticationPreemptive(true);
-        httpClient.getState().setCredentials(
-            AuthScope.ANY,
-            new UsernamePasswordCredentials("admin", "admin")
-        );
-        httpClient.executeMethod(get);
-        assertEquals(200, get.getStatusCode());
+        final HttpClient httpClient = HttpClients.createDefault();
+        final HttpGet httpGet = new HttpGet(baseUri() + LoginServlet.SERVLET_PATH);
+        final HttpResponse httpResponse = httpClient.execute(httpGet);
+        assertEquals(200, httpResponse.getStatusLine().getStatusCode());
     }
 
     @Test
     public void testLogoutServlet() throws Exception {
-        final HttpClient httpClient = new HttpClient();
-        final HttpMethod get = new GetMethod(BASE_URL + LogoutServlet.SERVLET_PATH);
-
-        httpClient.executeMethod(get);
-        assertEquals(200, get.getStatusCode());
+        final HttpClient httpClient = HttpClients.createDefault();
+        final HttpGet httpGet = new HttpGet(baseUri() + LogoutServlet.SERVLET_PATH);
+        final HttpResponse httpResponse = httpClient.execute(httpGet);
+        assertEquals(200, httpResponse.getStatusLine().getStatusCode());
     }
 
     @Test
     public void testSlingTest() throws Exception {
-        final HttpClient httpClient = new HttpClient();
-        final HttpMethod get = new GetMethod(BASE_URL + "/sling-test/sling/sling-test.html");
+        final HttpClient httpClient = HttpClients.createDefault();
+        final HttpGet httpGet = new HttpGet(baseUri() + "/sling-test/sling/sling-test.html");
 
-        httpClient.executeMethod(get);
-        assertEquals(200, get.getStatusCode());
+        final HttpResponse httpResponse = httpClient.execute(httpGet);
+        assertEquals(200, httpResponse.getStatusLine().getStatusCode());
 
         final Dictionary<String, String> properties = new Hashtable<String, String>();
         properties.put("sling.auth.requirements", "+/sling-test");
         bundleContext.registerService(Object.class.getName(), new Object(), properties);
 
-        httpClient.executeMethod(get);
-        assertEquals(401, get.getStatusCode());
+        final HttpResponse httpResponseUnauthorized = httpClient.execute(httpGet);
+        assertEquals(401, httpResponseUnauthorized.getStatusLine().getStatusCode());
 
-        httpClient.getState().setCredentials(
+        final CredentialsProvider credentialsProvider = new BasicCredentialsProvider();
+        credentialsProvider.setCredentials(
             AuthScope.ANY,
             new UsernamePasswordCredentials("admin", "admin")
         );
-        get.setDoAuthentication(true);
-        httpClient.executeMethod(get);
-        assertEquals(200, get.getStatusCode());
+
+        final HttpClient authenticatingHttpClient = HttpClients.custom().setDefaultCredentialsProvider(credentialsProvider).build();
+        final HttpResponse httpResponseAuthorized = authenticatingHttpClient.execute(httpGet);
+        assertEquals(200, httpResponseAuthorized.getStatusLine().getStatusCode());
     }
 
 }

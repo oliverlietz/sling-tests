@@ -24,12 +24,12 @@
   <parent>
     <groupId>org.apache.sling</groupId>
     <artifactId>org.apache.sling.tests</artifactId>
-    <version>3</version>
+    <version>4</version>
     <relativePath>../pom.xml</relativePath>
   </parent>
 
   <artifactId>org.apache.sling.tests.sling_2917</artifactId>
-  <version>3</version>
+  <version>4</version>
 
   <name>Apache Sling Tests SLING-2917</name>
 
