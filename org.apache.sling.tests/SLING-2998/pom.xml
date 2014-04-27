@@ -29,7 +29,7 @@
   </parent>
 
   <artifactId>org.apache.sling.tests.sling_2998</artifactId>
-  <version>4</version>
+  <version>5</version>
 
   <name>Apache Sling Tests SLING-2998</name>
 
