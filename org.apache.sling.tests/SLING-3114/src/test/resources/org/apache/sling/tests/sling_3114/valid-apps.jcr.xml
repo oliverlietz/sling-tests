@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sv:node sv:name="apps" xmlns:sv="http://www.jcp.org/jcr/sv/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0">
+  <sv:property sv:name="jcr:primaryType" sv:type="Name">
+    <sv:value>sling:Folder</sv:value>
+  </sv:property>
+  <sv:property sv:name="jcr:created" sv:type="Date">
+    <sv:value>2014-04-28T11:30:48.340+02:00</sv:value>
+  </sv:property>
+  <sv:property sv:name="jcr:createdBy" sv:type="String">
+    <sv:value>admin</sv:value>
+  </sv:property>
+  <sv:node sv:name="sling">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>sling:Folder</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:created" sv:type="Date">
+      <sv:value>2014-04-28T11:30:48.340+02:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:createdBy" sv:type="String">
+      <sv:value>admin</sv:value>
+    </sv:property>
+    <sv:node sv:name="servlet">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>sling:Folder</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:created" sv:type="Date">
+        <sv:value>2014-04-28T11:30:48.340+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:createdBy" sv:type="String">
+        <sv:value>admin</sv:value>
+      </sv:property>
+      <sv:node sv:name="default">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>sling:Folder</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:created" sv:type="Date">
+          <sv:value>2014-04-28T11:30:48.341+02:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:createdBy" sv:type="String">
+          <sv:value>admin</sv:value>
+        </sv:property>
+        <sv:node sv:name="ace.html.esp">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>nt:file</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:created" sv:type="Date">
+            <sv:value>2014-04-28T11:30:48.342+02:00</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:createdBy" sv:type="String">
+            <sv:value>admin</sv:value>
+          </sv:property>
+          <sv:node sv:name="jcr:content">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>nt:resource</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:uuid" sv:type="String">
+              <sv:value>5215419f-6791-4257-83f1-60146d1e5ad5</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:data" sv:type="Binary">
+              <sv:value>PCUNCiAgIHZhciBwcml2aWxlZ2VzSW5mbyA9IG5ldyBQYWNrYWdlcy5vcmcuYXBhY2hlLnNsaW5nLmpjci5qYWNrcmFiYml0LmFjY2Vzc21hbmFnZXIuUHJpdmlsZWdlc0luZm8oKTsNCiAgIGlmICghcHJpdmlsZWdlc0luZm8uY2FuUmVhZEFjY2Vzc0NvbnRyb2woY3VycmVudE5vZGUpKSB7DQogICAgICAvL25vIHJpZ2h0cyB0byB2aWV3IHRoZSBhY2Nlc3MgY29udHJvbCBvZiB0aGUgbm9kZSwgc28ganVzdCByZXR1cm4gYSA0MDQgc3RhdHVzDQogICAgICByZXNwb25zZS5zZW5kRXJyb3IoNDA0KTsNCiAgIH0gZWxzZSB7DQogICAgICB2YXIgcHJpbmNpcGFsSWQgPSByZXF1ZXN0LmdldFBhcmFtZXRlcigicGlkIik7DQogICAgICB2YXIgaXNWYWxpZFByaW5jaXBhbCA9IGZhbHNlOw0KICAgICAgaWYgKHByaW5jaXBhbElkICE9IG51bGwgJiYgcHJpbmNpcGFsSWQgIT0gIiIpIHsNCiAgICAgICAgIHZhciB1c2VyTWFuYWdlciA9IFBhY2thZ2VzLm9yZy5hcGFjaGUuc2xpbmcuamNyLmJhc2UudXRpbC5BY2Nlc3NDb250cm9sVXRpbC5nZXRVc2VyTWFuYWdlcihjdXJyZW50Tm9kZS5zZXNzaW9uKTsNCiAgICAgICAgIGlmICh1c2VyTWFuYWdlciAhPSBudWxsKSB7DQogICAgICAgICAgICB2YXIgYXV0aG9yaXphYmxlID0gdXNlck1hbmFnZXIuZ2V0QXV0aG9yaXphYmxlKHByaW5jaXBhbElkKTsNCiAgICAgICAgICAgIGlmIChhdXRob3JpemFibGUgIT0gbnVsbCkgew0KICAgICAgICAgICAgICAgaXNWYWxpZFByaW5jaXBhbCA9IHRydWU7DQogICAgICAgICAgICB9IGVsc2Ugew0KICAgICAgICAgICAgICAgLy9ubyB1c2VyL2dyb3VwIG1hdGNoZXMgdGhlIHN1cHBsaWVkIHByaW5jaXBhbCBpZA0KICAgICAgICAgICAgfQ0KICAgICAgICAgfQ0KICAgICAgfQ0KJT4NCjwhRE9DVFlQRSBodG1sIFBVQkxJQyAiLS8vVzNDLy9EVEQgWEhUTUwgMS4wIFN0cmljdC8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9UUi94aHRtbDEvRFREL3hodG1sMS1zdHJpY3QuZHRkIj4NCjxodG1sIHhtbDpsYW5nPSJlbiIgbGFuZz0iZW4iDQogICAgICB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94aHRtbCINCj4NCjxoZWFkPg0KICAgPG1ldGEgaHR0cC1lcXVpdj0iY29udGVudC10eXBlIiBjb250ZW50PSJ0ZXh0L2h0bWw7IGNoYXJzZXQ9dXRmLTgiIC8+DQogICA8dGl0bGU+QWNjZXNzIENvbnRyb2wgRW50cnkgOiA8JT1jdXJyZW50Tm9kZS5uYW1lJT48L3RpdGxlPg0KICAgDQogICA8c3R5bGUgVFlQRT0idGV4dC9jc3MiPg0KICAgPCEtLQ0KICAgICAgdWwuZXJyb3ItbXNnIHsNCiAgICAgICAgIGxpc3Qtc3R5bGUtcG9zaXRpb246IGluc2lkZTsNCiAgICAgICAgIGxpc3Qtc3R5bGUtdHlwZTogbm9uZTsNCiAgICAgIH0NCiAgICAgIGxpLmVycm9yLW1zZyB7DQogICAgICAgICBjb2xvcjogI2MwMDsNCiAgICAgICAgIGJhY2tncm91bmQtY29sb3I6ICNmZWU7DQogICAgICAgICBib3JkZXI6IDFweCBzb2xpZCAjYzAwOw0KICAgICAgICAgbWFyZ2luOiAzcHg7DQogICAgICAgICBwYWRkaW5nOiA0cHg7DQogICAgICAgICBsaW5lLWhlaWdodDogMThweDsNCiAgICAgICAgIGZvbnQtd2VpZ2h0OiBib2xkOw0KICAgICAgfQ0KICAgLS0+DQogICA8L3N0eWxlPg0KPC9oZWFkPg0KPGJvZHk+DQogICA8JQ0KICAgICAgaWYgKCFpc1ZhbGlkUHJpbmNpcGFsKSB7DQogICAlPg0KICAgICAgPHVsIGNsYXNzPSJlcnJvci1tc2ciPg0KICAgICAgICAgPGxpIGNsYXNzPSJlcnJvci1tc2ciPkludmFsaWQgcHJpbmNpcGFsIG5hbWU6ICI8JT1wcmluY2lwYWxJZCU+IjwvbGk+DQogICAgICA8L3VsPg0KICAgPCUNCiAgICAgIH0gZWxzZSAgew0KICAgICAgICAgLy9wcmluY2lwYWwgaXMgdmFsaWQNCiAgICAgICAgIHZhciBhY2Nlc3NSaWdodHMgPSBwcml2aWxlZ2VzSW5mby5nZXREZWNsYXJlZEFjY2Vzc1JpZ2h0c0ZvclByaW5jaXBhbChjdXJyZW50Tm9kZSwgcHJpbmNpcGFsSWQpOw0KICAgICAgICAgdmFyIGdyYW50ZWQgPSBhY2Nlc3NSaWdodHMuZ2V0R3JhbnRlZCgpOw0KICAgICAgICAgdmFyIGRlbmllZCA9IGFjY2Vzc1JpZ2h0cy5nZXREZW5pZWQoKTsNCiAgICAgICAgIHZhciBzdXBwb3J0ZWQgPSBwcml2aWxlZ2VzSW5mby5nZXRTdXBwb3J0ZWRQcml2aWxlZ2VzKGN1cnJlbnROb2RlKTsNCiAgICAgICAgIHZhciBjYW5Nb2RpZnkgPSBwcml2aWxlZ2VzSW5mby5jYW5Nb2RpZnlBY2Nlc3NDb250cm9sKGN1cnJlbnROb2RlKTsNCiAgICU+DQoNCiAgICAgIDxoMT5Nb2RpZnkgQWNjZXNzIENvbnRyb2wgRW50cnkgRm9yOiA8JT1wcmluY2lwYWxJZCU+PC9oMT4NCiAgIA0KICAgICAgPGZvcm0gbWV0aG9kPSJQT1NUIiBhY3Rpb249IjwlPXJlcXVlc3QuY29udGV4dFBhdGglPjwlPWN1cnJlbnROb2RlLnBhdGglPi5tb2RpZnlBY2UuaHRtbCIgPg0KICAgICAgICAgPGlucHV0IHR5cGU9ImhpZGRlbiIgbmFtZT0iOnJlZGlyZWN0IiB2YWx1ZT0iPCU9cmVxdWVzdC5jb250ZXh0UGF0aCU+PCU9Y3VycmVudE5vZGUucGF0aCU+LmFjbC5odG1sIiAvPg0KICAgICAgICAgPGlucHV0IHR5cGU9ImhpZGRlbiIgbmFtZT0icHJpbmNpcGFsSWQiIHZhbHVlPSI8JT1wcmluY2lwYWxJZCU+IiAvPg0KICAgICAgDQogICAgICAgICA8dGFibGUgd2lkdGg9IjEwMCUiPg0KICAgICAgICAgICAgPHRoZWFkPg0KICAgICAgICAgICAgICAgPHRyPg0KICAgICAgICAgICAgICAgICAgPHRoIGFsaWduPSJsZWZ0IiB3aWR0aD0iNTUlIj5Qcml2aWxlZ2U8L3RoPg0KICAgICAgICAgICAgICAgICAgPHRoIGFsaWduPSJjZW50ZXIiIHdpZHRoPSIxNSUiPklnbm9yZWQ8L3RoPg0KICAgICAgICAgICAgICAgICAgPHRoIGFsaWduPSJjZW50ZXIiIHdpZHRoPSIxNSUiPkdyYW50ZWQ8L3RoPg0KICAgICAgICAgICAgICAgICAgPHRoIGFsaWduPSJjZW50ZXIiIHdpZHRoPSIxNSUiPkRlbmllZDwvdGg+DQogICAgICAgICAgICAgICA8L3RyPg0KICAgICAgICAgICAgPC90aGVhZD4NCiAgICAgICAgICAgIDx0Ym9keT4NCiAgICAgICAgICAgIDwlDQogICAgICAgICAgICAgICBmb3IgKGk9MDsgaSA8IHN1cHBvcnRlZC5sZW5ndGg7IGkrKykgew0KICAgICAgICAgICAgICAgICAgdmFyIHAgPSBzdXBwb3J0ZWRbaV07DQogICAgICAgICAgICAlPg0KICAgICAgICAgICAgPHRyPg0KICAgICAgICAgICAgICAgPHRkIGFsaWduPSJsZWZ0IiB3aWR0aD0iNTUlIj48JT1wLmdldE5hbWUoKSU+PC90ZD4NCiAgICAgICAgICAgICAgIDx0ZCBhbGlnbj0iY2VudGVyIiB3aWR0aD0iMTUlIj48aW5wdXQgdHlwZT0icmFkaW8iIG5hbWU9InByaXZpbGVnZUA8JT1wLmdldE5hbWUoKSU+IiB2YWx1ZT0ibm9uZSIgPCU9Z3JhbnRlZC5jb250YWlucyhwKSB8fCBkZW5pZWQuY29udGFpbnMocCkgPyAiIiA6ICJjaGVja2VkIiU+IC8+PC90ZD4NCiAgICAgICAgICAgICAgIDx0ZCBhbGlnbj0iY2VudGVyIiB3aWR0aD0iMTUlIj48aW5wdXQgdHlwZT0icmFkaW8iIG5hbWU9InByaXZpbGVnZUA8JT1wLmdldE5hbWUoKSU+IiB2YWx1ZT0iZ3JhbnRlZCIgPCU9Z3JhbnRlZC5jb250YWlucyhwKSA/ICJjaGVja2VkIiA6ICIiJT4gLz48L3RkPg0KICAgICAgICAgICAgICAgPHRkIGFsaWduPSJjZW50ZXIiIHdpZHRoPSIxNSUiPjxpbnB1dCB0eXBlPSJyYWRpbyIgbmFtZT0icHJpdmlsZWdlQDwlPXAuZ2V0TmFtZSgpJT4iIHZhbHVlPSJkZW5pZWQiIDwlPWRlbmllZC5jb250YWlucyhwKSA/ICJjaGVja2VkIiA6ICIiJT4gLz48L3RkPg0KICAgICAgICAgICAgPC90cj4gICAgICANCiAgICAgICAgICAgIDwlICAgICAgDQogICAgICAgICAgICAgICB9DQogICAgICAgICAgICAlPg0KICAgICAgICAgICAgPC90Ym9keT4NCiAgICAgICAgICAgIDx0Zm9vdD4NCiAgICAgICAgICAgICAgIDx0cj4NCiAgICAgICAgICAgICAgICAgIDx0ZCBjb2xzcGFuPSIzIj48L3RkPg0KICAgICAgICAgICAgICAgICAgPHRkIGFsaWduPSJjZW50ZXIiIHdpZHRoPSIxNSUiPg0KICAgICAgICAgICAgICAgICAgICAgPGJ1dHRvbiBhY2Nlc3NrZXk9ImEiIGlkPSJhcHBseUJ1dHRvbiIgY2xhc3M9ImZvcm0tYnV0dG9uIiB0eXBlPSJzdWJtaXQiPkFwcGx5PC9idXR0b24+DQogICAgICAgICAgICAgICAgICA8L3RkPg0KICAgICAgICAgICAgICAgPC90cj4NCiAgICAgICAgICAgIDwvdGZvb3Q+DQogICAgICAgICA8L3RhYmxlPg0KICAgICAgPC9mb3JtPg0KICAgPCUNCiAgICAgIH0gLy9lbmQtaWYgaXNWYWxpZFByaW5jaXBhbA0KICAgJT4gICAgICANCjwvYm9keT4NCjwvaHRtbD4NCjwlDQogICB9DQolPg==</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:lastModified" sv:type="Date">
+              <sv:value>2011-03-12T10:43:50.236Z</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:lastModifiedBy" sv:type="String">
+              <sv:value>admin</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:mimeType" sv:type="String">
+              <sv:value>text/javascript</sv:value>
+            </sv:property>
+          </sv:node>
+        </sv:node>
+        <sv:node sv:name="acl.html.esp">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>nt:file</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:created" sv:type="Date">
+            <sv:value>2014-04-28T11:30:48.349+02:00</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:createdBy" sv:type="String">
+            <sv:value>admin</sv:value>
+          </sv:property>
+          <sv:node sv:name="jcr:content">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>nt:resource</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:uuid" sv:type="String">
+              <sv:value>1327bd96-eea5-45a4-bea8-fd4db39eb4e9</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:data" sv:type="Binary">
+              <sv:value>PCUNCiAgIHZhciBwcml2aWxlZ2VzSW5mbyA9IG5ldyBQYWNrYWdlcy5vcmcuYXBhY2hlLnNsaW5nLmpjci5qYWNrcmFiYml0LmFjY2Vzc21hbmFnZXIuUHJpdmlsZWdlc0luZm8oKTsNCiAgIGlmICghcHJpdmlsZWdlc0luZm8uY2FuUmVhZEFjY2Vzc0NvbnRyb2woY3VycmVudE5vZGUpKSB7DQogICAgICAvL25vIHJpZ2h0cyB0byB2aWV3IHRoZSBhY2Nlc3MgY29udHJvbCBvZiB0aGUgbm9kZSwgc28ganVzdCByZXR1cm4gYSA0MDQgc3RhdHVzDQogICAgICByZXNwb25zZS5zZW5kRXJyb3IoNDA0KTsNCiAgIH0gZWxzZSB7DQogICAgICB2YXIgY2FuTW9kaWZ5ID0gcHJpdmlsZWdlc0luZm8uY2FuTW9kaWZ5QWNjZXNzQ29udHJvbChjdXJyZW50Tm9kZSk7DQolPg0KPCFET0NUWVBFIGh0bWwgUFVCTElDICItLy9XM0MvL0RURCBYSFRNTCAxLjAgU3RyaWN0Ly9FTiIgImh0dHA6Ly93d3cudzMub3JnL1RSL3hodG1sMS9EVEQveGh0bWwxLXN0cmljdC5kdGQiPg0KPGh0bWwgeG1sOmxhbmc9ImVuIiBsYW5nPSJlbiINCiAgICAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hodG1sIg0KPg0KPGhlYWQ+DQogICA8bWV0YSBodHRwLWVxdWl2PSJjb250ZW50LXR5cGUiIGNvbnRlbnQ9InRleHQvaHRtbDsgY2hhcnNldD11dGYtOCIgLz4NCiAgIDx0aXRsZT5BY2Nlc3MgQ29udHJvbCBMaXN0IDogPCU9Y3VycmVudE5vZGUubmFtZSU+PC90aXRsZT4NCjwvaGVhZD4NCg0KPGJvZHk+DQoNCiAgIDxoMT5NYW5hZ2UgQWNjZXNzIENvbnRyb2wgRm9yOiA8JT1jdXJyZW50Tm9kZS5wYXRoJT48L2gxPg0KDQogICA8JSBpZiAoY2FuTW9kaWZ5KSB7ICU+DQogICA8ZmllbGRzZXQ+DQogICAgICA8bGVnZW5kPkFkZCBhbiBlbnRyeSBmb3IgYSB1c2VyIG9yIGdyb3VwPC9sZWdlbmQ+DQogICAgICA8Zm9ybSBtZXRob2Q9IkdFVCIgYWN0aW9uPSI8JT1yZXF1ZXN0LmNvbnRleHRQYXRoJT48JT1jdXJyZW50Tm9kZS5wYXRoJT4uYWNlLmh0bWwiPg0KICAgICAgICAgPGxhYmVsIGZvcj0iYWRkcGlkIj5QcmluY2lwYWwgTmFtZTo8L2xhYmVsPiANCiAgICAgICAgIDxpbnB1dCBpZD0iYWRkcGlkIiB0eXBlPSJ0ZXh0IiBuYW1lPSJwaWQiIHZhbHVlPSIiIC8+DQogICAgICAgICA8aW5wdXQgdHlwZT0ic3VibWl0IiB2YWx1ZT0iQWRkIi8+DQogICAgICA8L2Zvcm0+DQogICA8L2ZpZWxkc2V0Pg0KICAgPCUgfSAlPg0KDQogICA8ZmllbGRzZXQ+DQogICAgICA8bGVnZW5kPkN1cnJlbnQgYWNjZXNzIGNvbnRyb2wgZW50cmllczwvbGVnZW5kPg0KDQogICAgICA8Zm9ybSBtZXRob2Q9IlBPU1QiIGFjdGlvbj0iPCU9cmVxdWVzdC5jb250ZXh0UGF0aCU+PCU9Y3VycmVudE5vZGUucGF0aCU+LmRlbGV0ZUFjZS5odG1sIiA+DQogICAgICAgICA8aW5wdXQgdHlwZT0iaGlkZGVuIiBuYW1lPSI6cmVkaXJlY3QiIHZhbHVlPSI8JT1yZXF1ZXN0LmNvbnRleHRQYXRoJT4iIC8+DQogICAgICAgICANCiAgICAgICAgIDx0YWJsZSB3aWR0aD0iMTAwJSI+DQogICAgICAgICAgICA8dGhlYWQ+DQogICAgICAgICAgICAgICA8dHI+DQogICAgICAgICAgICAgICAgICA8dGggYWxpZ249ImxlZnQiIHdpZHRoPSI2MCUiPlByaW5jaXBhbDwvdGg+DQogICAgICAgICAgICAgICAgICA8dGggYWxpZ249ImNlbnRlciIgd2lkdGg9IjI1JSI+UHJpdmlsZWdlczwvdGg+DQogICAgICAgICAgICAgICAgICA8dGggYWxpZ249ImNlbnRlciIgd2lkdGg9IjE1JSI+PCUgaWYgKGNhbk1vZGlmeSkgeyAlPlJlbW92ZTwlIH0gJT48L3RoPg0KICAgICAgICAgICAgICAgPC90cj4NCiAgICAgICAgICAgIDwvdGhlYWQ+DQogICAgICAgICAgICA8dGJvZHk+DQogICAgICAgICAgICA8JQ0KICAgICAgICAgICAgICAgdmFyIGFjY2Vzc01hcCA9IHByaXZpbGVnZXNJbmZvLmdldERlY2xhcmVkQWNjZXNzUmlnaHRzKGN1cnJlbnROb2RlKTsNCiAgICAgICAgICAgICAgIHZhciBlbnRyeVNldCA9IGFjY2Vzc01hcC5lbnRyeVNldCgpOw0KICAgICAgICAgICAgICAgdmFyIGl0ZXJhdG9yID0gZW50cnlTZXQuaXRlcmF0b3IoKTsNCiAgICAgICAgICAgICAgIHdoaWxlIChpdGVyYXRvci5oYXNOZXh0KCkpIHsNCiAgICAgICAgICAgICAgICAgIHZhciBlbnRyeSA9IGl0ZXJhdG9yLm5leHQoKTsNCiAgICAgICAgICAgICAgICAgIHZhciBwcmluY2lwYWwgPSBlbnRyeS5nZXRLZXkoKTsNCiAgICAgICAgICAgICAgICAgIHZhciBhY2Nlc3NyaWdodHMgPSBlbnRyeS5nZXRWYWx1ZSgpOw0KICAgICAgICAgICAgJT4NCiAgICAgICAgICAgICAgIDx0cj4NCiAgICAgICAgICAgICAgICAgIDx0ZCBhbGlnbj0ibGVmdCIgd2lkdGg9IjYwJSIgPg0KICAgICAgICAgICAgICAgICAgICAgPCUgaWYgKGNhbk1vZGlmeSkgeyAlPg0KICAgICAgICAgICAgICAgICAgICAgICAgPGEgaHJlZj0iPCU9cmVxdWVzdC5jb250ZXh0UGF0aCU+PCU9Y3VycmVudE5vZGUucGF0aCU+LmFjZS5odG1sP3BpZD08JT1wcmluY2lwYWwuZ2V0TmFtZSgpJT4iPg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgPCU9cHJpbmNpcGFsLmdldE5hbWUoKSU+DQogICAgICAgICAgICAgICAgICAgICAgICA8L2E+DQogICAgICAgICAgICAgICAgICAgICA8JSB9IGVsc2UgeyAlPg0KICAgICAgICAgICAgICAgICAgICAgICAgPCU9cHJpbmNpcGFsLmdldE5hbWUoKSU+DQogICAgICAgICAgICAgICAgICAgICA8JSB9ICU+DQogICAgICAgICAgICAgICAgICA8L3RkPg0KICAgICAgICAgICAgICAgICAgPHRkIGFsaWduPSJjZW50ZXIiIHdpZHRoPSIyNSUiID4NCiAgICAgICAgICAgICAgICAgICAgIDwlPWFjY2Vzc3JpZ2h0cy5nZXRQcml2aWxlZ2VTZXREaXNwbGF5TmFtZShyZXF1ZXN0LmxvY2FsZSklPg0KICAgICAgICAgICAgICAgICAgPC90ZD4NCiAgICAgICAgICAgICAgICAgIDx0ZCBhbGlnbj0iY2VudGVyIiB3aWR0aD0iMTUlIj4NCiAgICAgICAgICAgICAgICAgICAgIDwlIGlmIChjYW5Nb2RpZnkpIHsgJT4NCiAgICAgICAgICAgICAgICAgICAgICAgIDxpbnB1dCB0eXBlPSJjaGVja2JveCIgbmFtZT0iOmFwcGx5VG8iIHZhbHVlPSI8JT1wcmluY2lwYWwuZ2V0TmFtZSgpJT4iIC8+DQogICAgICAgICAgICAgICAgICAgICA8JSB9ICU+DQogICAgICAgICAgICAgICAgICA8L3RkPg0KICAgICAgICAgICAgICAgPC90cj4NCiAgICAgICAgICAgIDwlICAgICAgDQogICAgICAgICAgICAgICB9DQogICAgICAgICAgICAlPg0KICAgICAgICAgICAgPC90Ym9keT4NCiAgICAgICAgICAgIDx0Zm9vdD4NCiAgICAgICAgICAgICAgIDx0cj4NCiAgICAgICAgICAgICAgICAgIDx0ZCBjb2xzcGFuPSIyIj48L3RkPg0KICAgICAgICAgICAgICAgICAgPHRkIGFsaWduPSJjZW50ZXIiPjxpbnB1dCB0eXBlPSJzdWJtaXQiIHZhbHVlPSJSZW1vdmUgU2VsZWN0ZWQiIC8+PC90ZD4NCiAgICAgICAgICAgICAgIDwvdHI+DQogICAgICAgICAgICA8L3Rmb290Pg0KICAgICAgICAgPC90YWJsZT4NCiAgICAgIDwvZm9ybT4NCiAgIDwvZmllbGRzZXQ+DQo8L2JvZHk+DQo8L2h0bWw+DQo8JSAgIA0KICAgfQ0KJT4NCg==</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:lastModified" sv:type="Date">
+              <sv:value>2011-03-12T10:43:50.236Z</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:lastModifiedBy" sv:type="String">
+              <sv:value>admin</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:mimeType" sv:type="String">
+              <sv:value>text/javascript</sv:value>
+            </sv:property>
+          </sv:node>
+        </sv:node>
+      </sv:node>
+    </sv:node>
+  </sv:node>
+</sv:node>
