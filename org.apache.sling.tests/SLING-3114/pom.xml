@@ -24,7 +24,7 @@
   <parent>
     <groupId>org.apache.sling</groupId>
     <artifactId>org.apache.sling.tests</artifactId>
-    <version>4</version>
+    <version>5</version>
     <relativePath>../pom.xml</relativePath>
   </parent>
 
